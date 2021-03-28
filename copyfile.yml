@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: true
+  tasks:
+    - name: copy file to tomcat server
+      copy:
+        src: /home/ansadmin/webapp.war
+        dest: /opt/tomcat/latest/webapps
